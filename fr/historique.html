@@ -330,7 +330,7 @@
             <div class="widget">
                 <h4 style="color:var(--secondary);margin:0 0 8px">Mon Conseiller</h4>
                 <p style="font-weight:800;" id="advisor-name-widget-right">Chargement...</p>
-                <p style="font-size:13px;color:#666;margin-top:6px" id="advisor-contact-right">Contactez-le par téléphone ou email.</p>
+                <p style="font-size:13px;color:#666;margin-top:6px" id="advisorEmail">Contactez-le par téléphone ou email.</p>
                 <div style="text-align:right;margin-top:8px"><a href="profil.html" style="font-size: 13px;">Voir mon profil complet</a></div>
             </div>
 
@@ -455,7 +455,7 @@
 
             document.getElementById('advisor-name-widget-right').textContent = userData.advisorName || 'N/A';
             document.getElementById('advisor-contact-right').textContent =
-                `Tél: ${userData.phone || 'N/A'} / E-mail: ${userData.advisorEmail || 'N/A'}`;
+                ` E-mail: ${userData.advisorEmail || 'N/A'}`;
 
             localStorage.setItem('transactionHistory', JSON.stringify(history));
             displayHistory(history, accountLabel, historyBody, noHistoryMessage, userData);
